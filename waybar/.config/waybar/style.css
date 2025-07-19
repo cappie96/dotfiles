@@ -1,0 +1,83 @@
+* {
+    font-family: "RobotMono Nerd Font Mono";
+    font-size: 12px;
+    min-height: 0;
+    color: #000000;
+}
+
+window#waybar {
+    border-radius: 10px;
+    background-color: #7a78a7;
+    background: transparent;
+}
+
+#custom-arch {
+    margin-left: 8px;
+    color: #045174;
+    background-color: #616c59;
+    padding: 0px 9px 0px 11px;
+    border-radius: 10px;
+}
+
+#workspaces {
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: #686f9a;
+    border-radius: 10px;
+}
+
+#workspaces button {
+    min-width: 0;
+}
+
+#workspaces button.active {
+    background-color: #2e3459;
+}
+
+#window {
+    background-color: #7694ab;
+    padding: 0px 15px 0px 15px;
+    border-radius: 10px;
+}
+
+#pulseaudio,
+#network,
+#bluetooth,
+#cpu {
+    margin-left: 3px;
+    margin-right: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#pulseaudio {
+    background-color: #89acaa;
+}
+
+#network {
+    background-color: #bb616c;
+    padding: 0px 10px 0px 12px;
+}
+
+#bluetooth {
+    background-color: #cdbdb2;
+    padding: 0px 11px 0px 11px;
+}
+
+#clock {
+    padding: 0px 10px 0px 10px;
+    background-color: #76977d;
+    border-radius: 10px;
+}
+
+#cpu {
+    background-color: #4b6d90;
+}
+
+#custom-notification {
+    margin-right: 8px;
+    background-color: #54627b;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
