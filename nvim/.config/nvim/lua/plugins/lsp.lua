@@ -117,11 +117,11 @@ return {
          cmd = { "gopls" },
          filetypes = { "go", "gomod", "gowork", "gotmpl" }
       },
-      -- pyright = {
-        -- cmd = { "pyright-langserver", "--stdio" },
-        -- filetypes = { "python" }
-      --},
-      -- rust_analyzer = {},
+      pyright = {
+        cmd = { "pyright-langserver", "--stdio" },
+        filetypes = { "python" }
+      },
+      rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 
       lua_ls = {
