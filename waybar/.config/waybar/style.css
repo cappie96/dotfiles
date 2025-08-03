@@ -1,83 +1,44 @@
+@define-color foreground #cdd6f4;
+@define-color background #1a1b26;
+
 * {
     font-family: "RobotMono Nerd Font Mono";
     font-size: 12px;
     min-height: 0;
     color: #000000;
+    border: none;
 }
 
-window#waybar {
-    border-radius: 10px;
-    background-color: #7a78a7;
-    background: transparent;
+.modules-left {
+  margin-left: 8px;
 }
 
-#custom-arch {
-    margin-left: 8px;
-    color: #045174;
-    background-color: #616c59;
-    padding: 0px 9px 0px 11px;
-    border-radius: 10px;
-}
-
-#workspaces {
-    margin-right: 0px;
-    margin-left: 0px;
-    background-color: #686f9a;
-    border-radius: 10px;
+.modules-right {
+  margin-right: 8px;
 }
 
 #workspaces button {
-    min-width: 0;
+  all: initial;
+  padding: 0 6px;
+  margin: 0 1.5px;
+  min-width: 9px;
 }
 
-#workspaces button.active {
-    background-color: #2e3459;
-}
-
-#window {
-    background-color: #7694ab;
-    padding: 0px 15px 0px 15px;
-    border-radius: 10px;
-}
-
-#pulseaudio,
+#tray,
+#cpu,
 #network,
 #bluetooth,
-#cpu {
-    margin-left: 3px;
-    margin-right: 5px;
-    padding: 5px;
-    border-radius: 10px;
-}
-
-#pulseaudio {
-    background-color: #89acaa;
-}
-
-#network {
-    background-color: #bb616c;
-    padding: 0px 10px 0px 12px;
-}
-
-#bluetooth {
-    background-color: #cdbdb2;
-    padding: 0px 11px 0px 11px;
-}
-
-#clock {
-    padding: 0px 10px 0px 10px;
-    background-color: #76977d;
-    border-radius: 10px;
-}
-
-#cpu {
-    background-color: #4b6d90;
-}
-
+#pulseaudio,
+#clock,
 #custom-notification {
-    margin-right: 8px;
-    background-color: #54627b;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
+  min-width: 12px;
+  margin: 0 7.5px;
+}
+
+#custom-expand-icon {
+  margin-right: 12px;
+}
+
+tooltip {
+  padding: 2px;
 }

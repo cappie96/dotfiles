@@ -10,8 +10,6 @@
     "modules-left": [
         "custom/arch",
         "hyprland/workspaces",
-        "tray",
-        "hyprland/window"
     ],
 
     "modules-center": [
@@ -19,9 +17,10 @@
     ],
 
     "modules-right": [
-        "pulseaudio",
-        "network",
+        "group/tray-expander",
         "bluetooth",
+        "network",
+        "pulseaudio",
         "cpu",
         "custom/notification",
     ],
@@ -34,6 +33,17 @@
     },
 
     "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "active": "󱓻"
+        },
         "persistent-workspaces": {
             "*": 5
         }
@@ -50,13 +60,33 @@
 
     "clock": {
         "timezone": "Europe/London",
-        "format": "{:%H:%M}"
+        "format": "{:%A %H:%M}"
+    },
+
+    "group/tray-expander": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 600,
+            "children-class": "tray-group-item"
+        },
+        "modules": [
+            "custom/expand-icon",
+            "tray"
+        ]
+    },
+
+    "custom/expand-icon": {
+        "format": " ",
+        "tooltip": false
+    },
+
+    "tray": {
+        "icon-size": 12,
+        "spacing": 12
     },
 
     "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {volume}%  {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
+        "format": "{icon}  {volume}%",
         "format-muted": " {format_source}",
         "format-source": " {volume}%",
         "format-source-muted": "",
@@ -69,23 +99,31 @@
     },
 
     "network": {
-        "format-wifi": "󰤢 ",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+        "format" : "{icon}",
+        "format-wifi" : "{icon}",
         "format-ethernet": "󰈀 ",
-        "format-disconnected": "󰤠 ",
-        "interval": 5,
-        "tooltip": false
+        "format-disconnected" : "󰖪",
+        "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-disconnected": "Disconnected",
+        "interval": 3,
+        "nospacing": 1,
+        "on-click": "kitty --class=Impala -e impala"
     },
 
     "bluetooth": {
-        "format-on": "󰂯",
-        "format-off": "BT-OFF",
+        "format": "",
         "format-disabled": "󰂲",
-        "format-connected-battery": "{device_battery_percentage}% 󰂯",
-        "on-click": "overskride"
+        "format-connected": "",
+        "tooltip-format": "Devices connected: {num_connections}",
+        "on-click": "blueberry"
     },
 
     "cpu": {
-        "format": "  {usage}%"
+        "interval": 5,
+        "format": "  {usage}%",
+        "on-click": "kitty -e btop"
     },
 
     "custom/notification": {
