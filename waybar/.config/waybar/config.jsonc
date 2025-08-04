@@ -60,7 +60,7 @@
 
     "clock": {
         "timezone": "Europe/London",
-        "format": "{:%A %H:%M}"
+        "format": "{:%I:%M %a %d}"
     },
 
     "group/tray-expander": {
