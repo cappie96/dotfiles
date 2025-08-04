@@ -23,6 +23,7 @@
         "pulseaudio",
         "cpu",
         "custom/notification",
+        "custom/power"
     ],
 
     "custom/arch": {
@@ -145,6 +146,12 @@
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
         "escape": true
+    },
+
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "wlogout -b 2"
     },
 
 }
