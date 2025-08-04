@@ -13,7 +13,6 @@
 window#waybar {
     background: @waybar-bg;
     border-radius: 8px;
-    opacity: 0.8;
 }
 
 .modules-left {
